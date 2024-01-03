@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+        <link rel="stylesheet" href="public/js/accout.js">
+    <title>All products - Redstore</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+               <a href="index.html"><img src="public/image/images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="cart.html"><img src="public/image/icons/cart.png" alt="" width="40px"
+                        height="40px"></a></li>
+                    <li><a href="accout.html"><img src="public/image/icons/admin.png" alt="" width="30px" ></a></li>
+                </ul>
+            </nav>
+            <img src="public/image/images/menu.png" alt="" class="menu-icons" onclick="menutoggle()">
+        </div>
+    </div>
+    <!------------acxount-page------>
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="public/image/images/image1.png" alt="">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()"> Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                        <input type="text" id="loginUsername" placeholder="Username">
+                        <input type="password" id="loginPassword" placeholder="Password">    
+                        <button type="submit" class="btn">Login</button>
+                            <a href="#" id="forgotPassword">Forgot Password</a>
+                        </form>
+                        <form id="RegForm">
+                        <input type="text" id="signupUsername" placeholder="Username">
+                            <input type="email" id="signupEmail" placeholder="Email">
+                            
+                           
+                        <input type="password" id="signupPassword" placeholder="Password">
+                            
+                           
+                        <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!------------fooret------------>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for android and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="public/image/images/play-store.png" alt="">
+                        <img src="public/image/images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="public/image/images/logo-white.png" alt="">
+                    <p>Our purpose is to Sustainably make the pleasure and
+                        benefist of sport accessible to the many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful link</h3>
+                    <ul>
+                        <li>coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliat</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <a href="https://www.facebook.com/profile.php?id=100073090854240"><li><img src="public/image/icons/iconface.png" alt="" width=17px" height="17px">Facerbook</li></a>
+                        <a href="https://www.tiktok.com/@trieu_3182004"><li><img src="public/image/icons/icontiktok.png" alt="" width=17px" height="17px">Tiktok</li></a>
+                        <a href="https://www.instagram.com/truongvantrieu_24/"><li><img src="public/image/icons/iconinta.png" alt="" width=17px" height="17px">Intagram</li></a>
+                        <a href="https://www.youtube.com/channel/UC3tDOpymmXGoUUdeXHAP36w"><li><img src="public/image/icons/iconyou.png" alt="" width=17px" height="17px">Youtube</li></a>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 20233 - Easy Tutorials</p>
+        </div>
+    </div>
+
+
+    <!-------------js for toggle menu--------->
+    <script>
+        var menuItems = document.getElementById("menuItems");
+        menuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "200px";
+            }
+            else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!-------------js for toggle menu--------->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register(){
+            RegForm.style.transform="translatex(0px)";
+            LoginForm.style.transform="translatex(0px)";
+            Indicator.style.transform="translatex(100px)";
+        }
+        function login(){
+            RegForm.style.transform="translatex(300px)";
+            LoginForm.style.transform="translatex(300px)";
+            Indicator.style.transform="translatex(0px)";
+        }
+    </script>
+     <script src="./public/js/login.js"></script>
+     <script src="public/js/register.js"></script>
+</body>
+
+</html>
